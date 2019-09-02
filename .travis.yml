@@ -24,7 +24,6 @@ before_install:
     - nvm use 6.10
     - node --version
     - npm install -g npm
-    - npm install -g grunt-cli
 
 install:
     - cd server && pip install -r dev-requirements.txt && cd ..
@@ -32,5 +31,5 @@ install:
 
 script:
     - cd server && flake8 && cd ..
-    - cd client && grunt build && cd ..
+    - cd client && node --max_old_space_size=4098 ./node_modules/.bin/grunt build && cd ..
     - cd server && python manage.py users:create -u test -p test -e test@localhost --admin && cd ..
