@@ -2,20 +2,17 @@ language: python
 
 python: "3.5"
 
-sudo: false
-dist: trusty
-
 services:
     - mongodb
     - elasticsearch
     - redis-server
 
-addons:
-  apt:
-    sources:
-    - mongodb-3.0-precise
-    packages:
-    - mongodb-org-server
+env:
+  global:
+    - ACCEPT_HIGHCHARTS_LICENSE=1
+    - HIGHCHARTS_VERSION=6.2.0
+    - HIGHCHARTS_USE_STYLED=1
+    - HIGHCHARTS_MOMENT=1
 
 cache:
   directories:
@@ -26,7 +23,7 @@ before_install:
     - nvm install 6.10
     - nvm use 6.10
     - node --version
-    - npm install -g npm@3
+    - npm install -g npm
     - npm install -g grunt-cli
 
 install:
