@@ -7,12 +7,14 @@
 module.exports = function(grunt) {
     return {
         apps: [
-            'superdesk.analytics'
+            'superdesk.analytics',
+            'superdesk-planning'
         ],
         importApps: [
             '../index',
             'superdesk-analytics',
-            'superdesk-publisher'
+            'superdesk-publisher',
+            'superdesk-planning'
         ],
         defaultRoute: '/workspace/personal',
 
@@ -40,10 +42,13 @@ module.exports = function(grunt) {
             swimlane: {defaultNumberOfColumns: 4},
             editor3: true,
             validatePointOfInterestForImages: true,
-            editorHighlights: true
+            editorHighlights: true,
+            planning: true
         },
         workspace: {
             analytics: true
+            planning: true
+            assignments: true
         },
     };
 };
