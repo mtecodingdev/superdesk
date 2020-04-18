@@ -5,6 +5,6 @@
         "superdesk-analytics": "tomaskikutis/superdesk-analytics#next",
         "superdesk-core": "superdesk/superdesk-client-core#develop",
         "superdesk-publisher": "superdesk/superdesk-publisher#master",
-        "superdesk-planning": "superdesk-planning#3042ec3"
+        "superdesk-planning": "superdesk-planning#master"
     }
 }
